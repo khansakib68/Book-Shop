@@ -8,13 +8,18 @@ import productsRoutes from './routes/productRoutes.js'
 import categoryRoutes from './routes/categoryRoutes.js'
 import cors from  'cors';
 import path from 'path';
-
+import {fileURLToPath} from 'url';
 
 /*---------------------ENV CONFIGURE---------------------*/
 dotenv.config();
 
 /*---------------------DTABASE CONFIG--------------------*/
 connectDB();
+
+/*==========ESMODULE-FIX================*/
+const __filename = fileURLToPath(import.meta.url);
+const __dirname  = path.dirname(__filename);
+
 
 /*---------------------REST---------------------*/
 const app =express();
