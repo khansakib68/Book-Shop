@@ -56,7 +56,7 @@ export const createProductController =async (req,res) =>{
 
 
     } catch (error) {
-        console.log(error);
+        
         res.status(500).send({
             success:false,
             error,
@@ -77,7 +77,7 @@ try {
       products,
    })
 } catch (error) {
-   console.log(error);
+   
    res.status(500).send({
       success : false,
       message:'error in getting products',
@@ -95,7 +95,7 @@ try {
 
    })
 } catch (error) {
-   console.log(error);
+   
    res.status(500).send({
       success:false,
       message:'error while getting single product',
@@ -113,7 +113,7 @@ export const productPhotoController = async (req, res) => {
      }
       
    } catch (error) {
-      console.log(error);
+      
       res.status(500).send({
         success: false,
         message: "Erorr while getting photo",
@@ -132,7 +132,7 @@ export const productPhotoController = async (req, res) => {
       })
       
     } catch (error) {
-      console.log(error);
+      
       res.status(500).send({
          success:false,
          message:"error while deleting product",
@@ -196,7 +196,7 @@ export const productPhotoController = async (req, res) => {
  
  
      } catch (error) {
-         console.log(error);
+         
          res.status(500).send({
              success:false,
              error,
@@ -221,7 +221,7 @@ export const productPhotoController = async (req, res) => {
          });
 
       } catch (error) {
-         console.log(error);
+        
          res.status(400).send({
             success:false,
             message:'error while filtering product',
@@ -243,7 +243,7 @@ export const productPhotoController = async (req, res) => {
          res.json(results);
          
       } catch (error) {
-         console.log(error);
+         
 
          res.status(400).send({
             success:false,
@@ -272,7 +272,7 @@ export const productPhotoController = async (req, res) => {
          });
          
       } catch (error) {
-         console.log(error);
+        
          res.status(400).send({
             success:false,
             error,
@@ -294,7 +294,7 @@ export const productPhotoController = async (req, res) => {
       
       
      } catch (error) {
-      console.log(error);
+      
       
      }
     };

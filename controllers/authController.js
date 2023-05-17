@@ -51,7 +51,7 @@ export const registerController = async (req,res) => {
             user
           })
     } catch(error){
-        console.log(error);
+       
         res.status(500).send({
             success: false,
              message : 'Error in Registration',
@@ -106,7 +106,7 @@ export const loginController = async (req,res) =>{
       });
       
    } catch (error) {
-      console.log(error);
+      
       res.status(500).send({
          success:false,
          message: 'Error in login',
@@ -146,7 +146,7 @@ export const updateProfileController =async (req,res) =>{
       });
       
    } catch (error) {
-      console.log(error);
+   
       res.status(400).send({
          success:false,
          message:'Error while updating profile',
@@ -162,7 +162,7 @@ export const getOrdersController = async(req,res)=>{
       res.json(orders);
       
    } catch (error) {
-      console.log(error);
+      
       res.status(500).send({
          success:false,
          message:'error while getting order',
@@ -181,7 +181,7 @@ export const getOrdersController = async(req,res)=>{
       res.json(orders);
       
    } catch (error) {
-      console.log(error);
+      
       res.status(500).send({
          success:false,
          message:'error while getting order',
@@ -202,7 +202,7 @@ export const orderStatusController = async (req, res) => {
      );
      res.json(orders);
    } catch (error) {
-     console.log(error);
+    
      res.status(500).send({
        success: false,
        message: "Error While Updateing Order",

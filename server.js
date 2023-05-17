@@ -7,6 +7,7 @@ import authRoutes from './routes/authRoute.js';
 import productsRoutes from './routes/productRoutes.js'
 import categoryRoutes from './routes/categoryRoutes.js'
 import cors from  'cors';
+import path from 'path';
 
 
 /*---------------------ENV CONFIGURE---------------------*/
@@ -20,8 +21,9 @@ const app =express();
 
 /*---------------------MIDDLE_WARES---------------------*/
 app.use(cors());
-app.use(express.json())
-app.use(morgan('dev'))
+app.use(express.json());
+app.use(morgan('dev'));
+app.use(express.static(path.join(__dirname,'./client/build')));
 
 /*-------Routes-------*/
 app.use("/api/v1/auth", authRoutes);
@@ -30,9 +32,9 @@ app.use("/api/v1/product",productsRoutes);
 
 /*--------------------REST API------------------*/
 
-app.get("/",(req,res) =>{
-    res.send("<h1>WELLCOME TO OUR BOOK-STORE</h1>");
-});
+app.use('*',function(re,res){
+res.sendFile(path.join(__dirname,'./client/build/index.html'));
+})
 
 /*--------------------PORT------------------*/
 
@@ -40,5 +42,5 @@ const PORT =process.env.PORT || 8080;
 
 /*--------------------CHECK RUNNING------------------*/
 app.listen(PORT , () =>{
-    console.log(`server running ${PORT}`);
+   
 });

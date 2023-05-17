@@ -24,7 +24,7 @@ export const createCategoryController =async (req,res) =>{
 
 
     } catch (error) {
-        console.log(error);
+        
         res.status(500).send({
             success:false,
             error,
@@ -46,7 +46,7 @@ export const updateCategoryController = async(req,res) =>{
       category,
     })
   } catch (error) {
-    console.log(error);
+    
     res.status(500).send({
       success:false,
       error,
@@ -68,7 +68,7 @@ export const categoryController =async (req,res) =>{
     })
     
   } catch (error) {
-    console.log(error);
+    
     res.status(500).send({
       success:false,
       error,
@@ -91,7 +91,7 @@ export const singleCategoryController =async  (req,res)=>{
     
   } catch (error) {
 
-    console.log(error);
+   
     res.status(500).send({
       success:false,
       error,
@@ -113,7 +113,7 @@ export const deleteCategoryController = async(req, res) =>{
     
   } catch (error) {
 
-    console.log(error);
+    
     res.status(500).send({
       success:false,
       message:'error while deleting category',
