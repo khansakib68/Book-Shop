@@ -37,7 +37,7 @@ app.use("/api/v1/product",productsRoutes);
 
 /*--------------------REST API------------------*/
 
-app.use('*',function(res,res){
+app.use('*',function(req,res){
 res.sendFile(path.join(__dirname,'./client/build/index.html'));
 })
 
